@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- En-tête de la page -->
+        <meta charset="utf-8" lang="fr-FR" />
+		<link rel="stylesheet" href="style.css" />
+        <meta name="viewport" content="width=device-width"/>
+        <link rel="icon" href="img/favicon.ico" />
+        <title>Réservation de Vélib</title>
+    </head>
+    <body>
+    	<header>
+            <div id="contenu_header">
+                <img src="img/Logo_Velov.gif" alt="logo">
+                <h1>Application de Réservation de Vélo en ligne</h1>
+
+            </div>
+        </header>
+        <!---slider------->
+        <section id="section_slider" >
+            <div class="container">
+                <div id="container_slider">
+                    <div id="slider">
+                        <figure>
+                            <img src="img/visuel_mode-emploi.jpg" id="diapo" alt="img1">
+                            <figcaption id="texte_diapo">Bienvenue sur le site de réservation de votre Vélo'v !<br />
+                                Pour commencer, veuillez suivre les étapes suivantes.</figcaption>
+                        </figure>
+                    </div>
+                    <div id="chevron"><a><i class="fa fa-arrow-left" aria-hidden="true" id="left"></i></a>
+                        <a><i class="fa fa-arrow-right" aria-hidden="true" id="right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <div id="container_map">
+                <div id="map">
+                    
+                </div>
+                <aside id="info_station">
+                    <div >
+                        <span id="close">x</span>
+                        <h3>Détail de la station</h3>
+                        <ul id="station">
+                            <li ><h5>Nom de la station : </h5></li>
+                            <li id ="titre"></li>
+                            <li ><h5>Adresse de la station : </h5></li>
+                            <li id ="adresse"></li>
+                            <li ><h5>Vélo(s) disponible(s) : </h5></li>
+                            <li id="disponible"></li>
+                            <li ><h5>Place(s) libre(s) : </h5></li>
+                            <li id="place"></li>
+                        </ul>
+                    </div>
+                    <div id="signature">
+                        <h5>Signature électronique</h5>
+                        <canvas id="canvas" width="200" height="150"></canvas>
+                        <form id="closePopup">
+                            <button type="button" id="hidePopup"> Annuler </button>
+                            <button type="button" id="validation"> Valider </button><!--clean remplacé par validation-->
+                        </form>
+                    </div>
+                    <button id="boutonReservation">Réserver</button>
+                </aside>
+            </div>
+        </section>
+        <footer>
+            <!-- réservation ici-->
+            <div id="Reservation">
+                <span id="ligneStation"></span><br />
+                <span id="ligneAdresse"></span><br />
+                <span id="compteur"></span><br />
+                <button id="buttonAnnul">Annuler</button>
+            </div>
+        </footer>
+            
+    </body>
+    
+    <script src="js/diapo.js"></script>
+    <script src="js/map/markerclusterer.js"></script>
+    <script src="js/chrono.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/map/map.js"></script>
+    <script src="js/canvas.js"></script>
+    <script src="js/init.js"></script>
+    <script src="https://use.fontawesome.com/854d45b8f4.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=xxxxxxxxx&callback=mapObj.initMap"></script>
+</html>

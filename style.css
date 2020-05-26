@@ -1,0 +1,432 @@
+/*-------------------------------------------------
+normalisation
+-------------------------------------------------*/
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*------------------------------------------------------------------------------
+fin normalisation
+------------------------------------------------------------------------------*/
+body 
+{
+  min-height: 2000px;
+  padding-top: 70px;
+  background-color: #c3c3c3;
+}
+
+button
+{
+  border-radius: 10px 10px 10px 10px;
+}
+
+/*****************navbar***********/
+header 
+{
+  background-color: white;
+  position: fixed;
+  z-index: 1000;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  padding-top: 20px;
+  width: 100%;
+  height: 100px;
+  box-shadow: 0px -2px 15px rgba(0,0,0, 0.5);
+}
+
+#contenu_header {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-family: "rajdhanibold", arial, serif;
+  text-transform: uppercase;
+}
+
+#contenu_header img {
+    height: 90px;
+}
+/*****************slider***********/
+#section_slider {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 140px;
+  padding-top: 0px;
+}
+
+#container_slider {
+  position: relative;    
+  background-color: #555;
+  width: 70%;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  padding-top: 0px;
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 0px 5px 15px rgba(0,0,0, 1);     
+}
+
+#slider 
+{
+  width: 75%;
+  max-width: 680px;
+  height: 400px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  padding-left: 0px;
+}
+
+h3 
+{
+  font-family: "rajdhanibold", arial, serif;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+#diapo 
+{
+  width:500px;
+  height:500px;
+  border : solid 1px #eee;
+  background-size : cover;
+  background-repeat : no-repeat;
+  background-position : center;
+  margin-left: 5%;
+  margin-top: -10%;
+}
+
+#slider figcaption
+{
+  position: absolute;
+  width: 30%;
+  height: 150px;
+  bottom: 120px;
+  left: 50px;
+  border-radius: 10px 10px 10px 10px;    
+  background-color: rgba(24, 24, 24, 0.9);
+  color: #fff;
+  font-family: arial, serif;
+  font-size: 0.9em;
+  padding-top: 10px;
+  padding-left: 15px;
+  z-index: 20;
+}
+
+#chevron
+{
+  top: 45%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+#left
+{
+  color: white;
+  float: left;
+  font-size: 1.5em;
+  background-color: rgba(0,0,0,.5);
+  margin-left: -2%;
+  padding: 1%;
+  padding-left: 2.5%;
+  border-radius: 60%;
+}
+
+#right
+{
+  color: white;
+  float: right;
+  font-size: 1.5em;
+  background-color: rgba(0,0,0,.5);
+  margin-right: -2%;
+  padding: 1%;
+  padding-right: 2.5%;
+  border-radius: 60%;
+  overflow: hidden;
+}
+/****************map**************/
+section
+{
+  margin-top:40px;
+}
+
+#container_map {
+  display: flex;    
+  background-color: #555;
+  width: 70%;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  padding-top: 0px;
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 0px 5px 15px rgba(0,0,0, 1);     
+}
+
+#map
+{
+  width: 100%;
+  min-height:850px;
+  border:2px solid lightgrey;
+  border-radius: 10px;
+  opacity:.9;
+}
+
+#close 
+{
+  color: rgb(178, 39, 37);
+  top: 4px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+  margin-left: 90%;
+  cursor: pointer;
+}
+
+#info_station
+{
+  padding-top: 20px;
+  width: 55%;
+  min-height: 680px;
+  z-index: 3;
+  display:none;
+  background-color: rgba(226, 222, 220,0.9);
+  border-radius: 10px; 
+}
+
+aside h3
+{
+  padding-top: 50px;
+  text-align: center;
+  color: rgb(178, 39, 37);
+}
+
+aside li h5
+{
+  color: rgb(178, 39, 37);
+  font-size: 1.2em;
+  padding-bottom: 5px;
+  padding-top: 15px;
+}
+
+#boutonReservation
+{
+  margin-left: 40%;
+  display: none;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+#signature
+{
+  margin-left: 10%;
+  font-size: 1.2em;
+  display: none;
+}
+
+#canvas
+{
+  border: 1px solid #333;
+  margin-left: 10%;
+}
+
+#hidePopup
+{
+  margin-left: 10%;
+  background-color: red;
+}
+
+#validation
+{
+  margin-left: 27%;
+  background-color: green;
+}
+
+/**************footer**************/
+
+footer
+{
+  margin-top:40px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  height:150px;
+  background-color:lightgrey;
+  font-size: 1.5em;
+  text-align: center;
+  border: 2px solid rgb(178, 39, 37);
+  border-radius: 10px;
+  font-family: "rajdhanibold", arial, serif;
+}
+
+#buttonAnnul 
+{
+    padding: 5px 15px;
+    cursor: pointer;
+    display: none;
+    background-color: red;
+    margin-left: 45%;
+}
+
+#compteur
+{
+  display: none;
+}
+
+/*---------------------------------------------------
+mediaqueries
+---------------------------------------------------*/
+
+/*---------------------------------------------------- écrans mobiles  480 px-----------------------------*/
+
+@media all and (max-width: 480px)
+{
+
+    #contenu_header img 
+  {
+    width: 60%;
+  }
+
+  h1 
+  {
+    font-size: 1em;
+    text-align: right;
+  }
+
+  #container_slider 
+  {
+    max-width: 1300px; 
+  }
+
+ #diapo 
+  {
+    width:180px;
+    height:180px;
+    border-radius: 10px 10px 10px 10px;
+    margin-left: -40%;
+    margin-top: -5%;
+  } 
+
+  #slider figcaption
+  {
+    width: 65%;
+    left: 12%;
+    top: 55%;
+    text-align: center;
+    padding-top: 10%;
+    padding-right: 5%;
+  }
+
+  #container_map 
+  {
+  flex-direction: column;  
+
+  }
+
+  #map 
+  {
+    min-height: 400px;
+  }
+
+  #info_station
+  {
+    width: 100%;
+    margin-top: 0%;
+    margin-left: 0%;
+    max-height: 1000px;
+    padding-bottom: 0px;
+  }
+
+  aside h3
+  {
+    padding-top: 0px;
+    text-align: center;
+    color: rgb(178, 39, 37);
+  }
+
+  aside li h5
+  {
+    color: rgb(178, 39, 37);
+    font-size: 0.8em;
+    padding-bottom: 5px;
+    padding-top: 5px;
+  }
+  
+  #canvas
+  {
+    margin-left: -2%;
+  }
+
+  #hidePopup
+  {
+    margin-left: -2%;
+  }
+
+  #validation
+  {
+    margin-left: 35%;
+  }
+
+  footer
+  {
+    height:250px;
+  }
+
+  #buttonAnnul 
+  {
+    margin-left: 40%;
+  }
+}
